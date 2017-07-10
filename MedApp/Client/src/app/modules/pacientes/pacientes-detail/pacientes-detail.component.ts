@@ -57,7 +57,9 @@ export class PacientesDetailComponent implements OnInit {
       this.paciente.Edad = value.edad;
       this.paciente.Sexo = value.sexo;
 
-      this.guardarPaciente(this.paciente);
+      this.ps.guardarPaciente(this.paciente).subscribe(data => {
+          this.regresar();
+      });
     }
 
     regresar() {

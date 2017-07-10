@@ -366,6 +366,8 @@
     <TypeScriptCompile Include="Client\src\app\modules\citas\citas-list\citas-list.component.ts" />
     <TypeScriptCompile Include="Client\src\app\modules\citas\citas.module.ts" />
     <TypeScriptCompile Include="Client\src\app\modules\citas\citas.routes.ts" />
+    <TypeScriptCompile Include="Client\src\app\modules\citas\citas.service.spec.ts" />
+    <TypeScriptCompile Include="Client\src\app\modules\citas\citas.service.ts" />
     <TypeScriptCompile Include="Client\src\app\modules\menu\menu-links\menu-links.component.spec.ts" />
     <TypeScriptCompile Include="Client\src\app\modules\menu\menu-links\menu-links.component.ts" />
     <TypeScriptCompile Include="Client\src\app\modules\menu\menu.module.ts" />
