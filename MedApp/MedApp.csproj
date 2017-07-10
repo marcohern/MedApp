@@ -300,6 +300,7 @@
     <Content Include="Client\dist\scripts.bundle.js.map" />
     <Content Include="Client\dist\styles.bundle.js.map" />
     <Content Include="Client\dist\vendor.bundle.js.map" />
+    <Content Include=".gitignore" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
