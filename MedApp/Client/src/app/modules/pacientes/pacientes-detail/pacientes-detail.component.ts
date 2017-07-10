@@ -42,8 +42,7 @@ export class PacientesDetailComponent implements OnInit {
               ID: null,
               Nombre: '',
               Edad: 0,
-              Sexo: 0,
-              SexoStr: ''
+              Sexo: 0
           }
       }
     }
