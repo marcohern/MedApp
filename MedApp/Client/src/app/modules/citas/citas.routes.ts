@@ -7,8 +7,8 @@ import { CitasDetailComponent } from './citas-detail/citas-detail.component';
 
 const routes: Routes = [
     { path: 'citas', component: CitasListComponent },
-    { path: 'cita/:id', component: CitasDetailComponent },
     { path: 'cita/crear', component: CitasDetailComponent },
+    { path: 'cita/:id', component: CitasDetailComponent },
 ];
 
 @NgModule({
