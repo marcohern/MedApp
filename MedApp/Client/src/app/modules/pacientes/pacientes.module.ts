@@ -1,5 +1,6 @@
 ﻿import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { PacientesRoutes } from './pacientes.routes';
@@ -11,8 +12,11 @@ import { PacientesService } from './pacientes.service';
 
 @NgModule({
   imports: [
-    CommonModule,
-    PacientesRoutes
+      CommonModule,
+      HttpModule,
+      FormsModule,
+      ReactiveFormsModule,
+      PacientesRoutes
     ],
     providers:[ PacientesService ],
   declarations: [PacientesListComponent, PacientesDetailComponent]

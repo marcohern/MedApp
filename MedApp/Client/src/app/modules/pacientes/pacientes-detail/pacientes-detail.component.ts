@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+
+import { PacientesService } from '../pacientes.service';
 
 @Component({
   selector: 'app-pacientes-detail',
@@ -7,9 +11,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PacientesDetailComponent implements OnInit {
 
-  constructor() { }
+    private pacienteForm: FormGroup;
+    constructor(
+        private fb: FormBuilder,
+        private router: Router,
+        private route: ActivatedRoute,
+        private ps: PacientesService) { }
 
   ngOnInit() {
+      this.pacienteForm = this.fb.group({
+          nombre: ['', Validators.required],
+          edad: ['', Validators.required],
+          sexo: ['', Validators.required]
+      });
+
+      let id = this.route.snapshot.params['id'];
+      if (id) {
+
+      }
+  }
+
+  regresar() {
+      this.router.navigate(['/pacientes']);
   }
 
 }

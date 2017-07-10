@@ -21,7 +21,7 @@ export class PacientesService {
 
     public getPacientes():Observable<Paciente[]> {
         return this.http
-            .get('/pacientes')
+            .get('/api/pacientes')
             .map((r: Response) => <Paciente[]>r.json())
             .catch(this.handleError)
             .do(data => this.do(data));

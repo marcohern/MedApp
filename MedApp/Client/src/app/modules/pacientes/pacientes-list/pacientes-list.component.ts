@@ -1,5 +1,7 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { PacientesService } from '../pacientes.service';
+import { Paciente } from '../../../models/paciente';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pacientes-list',
@@ -8,11 +10,15 @@ import { PacientesService } from '../pacientes.service';
 })
 export class PacientesListComponent implements OnInit {
 
-    constructor(private ps: PacientesService) { }
+    pacientes: Paciente[];
+
+    constructor(
+        private ps: PacientesService,
+        private router:Router) { }
 
     ngOnInit() {
         this.ps.getPacientes().subscribe(pacientes => {
-            console.log(pacientes);
+            this.pacientes = pacientes;
         });
     }
 

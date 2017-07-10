@@ -1,3 +1,36 @@
-<p>
-  pacientes-detail works!
-</p>
+﻿<h2>Detalles de Paciente</h2>
+<a class="btn btn-warning" [routerLink]="['/pacientes']">
+  <i class="glyphicon glyphicon-arrow-left"></i> Regresar
+</a>
+<form [formGroup]="pacienteForm">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label for="name">Nombre*</label>
+        <input type="text" formControlName="nombre" class="form-control" id="nombre" placeholder="John Jairo">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="edad">Edad*</label>
+        <input type="number" formControlName="edad" class="form-control" id="edad" placeholder="26">
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="sexo">Sexo*</label>
+        <select formControlName="sexo" class="form-control">
+          <option value="0">Masculino</option>
+          <option value="1">Femenino</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-sm-12">
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-save"></i> Guardar</button>
+      </div>
+    </div>
+  </div>
+</form>
