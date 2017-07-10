@@ -1,5 +1,6 @@
 namespace MedApp.Migrations
 {
+    using MedApp.DAL;
     using MedApp.Models;
     using System;
     using System.Collections.Generic;
@@ -67,13 +68,20 @@ namespace MedApp.Migrations
 
             citas.ForEach(c => context.Citas.AddOrUpdate(cid => cid.ID, c));
             context.SaveChanges();
+            IHasher hasher = new Hasher();
 
             var users = new List<User>
             {
-                new User{ ID=1, Username="mhernandez", Name="Marco Hernandez", Password="12345", Salt="12345678", Role=UserRole.Admin },
-                new User{ ID=2, Username="admin", Name="Admin E. Strator", Password="12345", Salt="12345678", Role=UserRole.Admin },
-                new User{ ID=3, Username="staff", Name="Staff Herr", Password="12345", Salt="12345678", Role=UserRole.Admin },
+                new User{ ID=1, Username="mhernandez", Name="Marco Hernandez", Password="12345", Role=UserRole.Admin },
+                new User{ ID=2, Username="admin", Name="Admin E. Strator", Password="12345", Role=UserRole.Admin },
+                new User{ ID=3, Username="staff", Name="Staff Herr", Password="12345", Role=UserRole.Staff },
             };
+
+            foreach (User user in users)
+            {
+                user.Salt = hasher.GenerateSalt();
+                user.Password = hasher.HashPassword(user.Password, user.Salt);
+            }
 
             users.ForEach(c=>context.Users.AddOrUpdate(cid => cid.ID, c));
             context.SaveChanges();

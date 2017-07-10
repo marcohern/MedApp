@@ -10,15 +10,19 @@ namespace MedApp.DAL
     public class Hasher : IHasher
     {
         private static string template = "0123456789abcdefghijklmnopABCDEFGHIJKLMNOP()[]{}-+";
+        private Random random;
+
+        public Hasher()
+        {
+            random = new Random();
+        }
 
         public string GenerateSalt()
         {
-            Random random = new Random();
             StringBuilder salt = new StringBuilder("");
             for (int i=0;i<64;i++)
             {
-                int rand = random.Next();
-                int index = rand % template.Length;
+                int index = random.Next(0, template.Length);
                 char c = template[index];
                 salt.Append(c);
             }

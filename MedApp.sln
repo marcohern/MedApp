@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedApp", "MedApp\MedApp.csproj", "{791D4B09-58F1-4DB1-9D73-F6290F351D89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedApp.Test", "MedApp.Test\MedApp.Test.csproj", "{E4BC33F5-6FBE-4714-B9B0-155F996B76CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{791D4B09-58F1-4DB1-9D73-F6290F351D89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{791D4B09-58F1-4DB1-9D73-F6290F351D89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{791D4B09-58F1-4DB1-9D73-F6290F351D89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4BC33F5-6FBE-4714-B9B0-155F996B76CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4BC33F5-6FBE-4714-B9B0-155F996B76CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4BC33F5-6FBE-4714-B9B0-155F996B76CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4BC33F5-6FBE-4714-B9B0-155F996B76CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

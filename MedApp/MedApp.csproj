@@ -203,6 +203,7 @@
     <Compile Include="DAL\PacientesRepositorio.cs" />
     <Compile Include="DAL\Repositorio.cs" />
     <Compile Include="DAL\TipoCitasRepositorio.cs" />
+    <Compile Include="Filters\Secure.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

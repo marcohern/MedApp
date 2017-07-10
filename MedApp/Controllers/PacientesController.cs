@@ -10,9 +10,11 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using MedApp.DAL;
 using MedApp.Models;
+using MedApp.Filters;
 
 namespace MedApp.Controllers
 {
+    [Secure]
     public class PacientesController : ApiController
     {
         private IDatos datos;
