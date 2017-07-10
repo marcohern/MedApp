@@ -219,7 +219,7 @@
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Client\dist\favicon.ico" />
-    <Content Include="Client\dist\glyphicons-halflings-regular.89889688147bd7575d63.svg" />
+    <Content Include="glyphicons-halflings-regular.89889688147bd7575d63.svg" />
     <Content Include="Client\dist\index.html" />
     <Content Include="Client\dist\inline.bundle.js" />
     <Content Include="Client\dist\main.bundle.js" />
@@ -290,10 +290,10 @@
     <Content Include="Client\src\tsconfig.spec.json" />
     <Content Include="Client\tsconfig.json" />
     <Content Include="Client\tslint.json" />
-    <Content Include="Client\dist\glyphicons-halflings-regular.448c34a56d699c29117a.woff2" />
-    <Content Include="Client\dist\glyphicons-halflings-regular.e18bbf611f2a2e43afc0.ttf" />
-    <Content Include="Client\dist\glyphicons-halflings-regular.f4769f9bdb7466be6508.eot" />
-    <Content Include="Client\dist\glyphicons-halflings-regular.fa2772327f55d8198301.woff" />
+    <Content Include="glyphicons-halflings-regular.448c34a56d699c29117a.woff2" />
+    <Content Include="glyphicons-halflings-regular.e18bbf611f2a2e43afc0.ttf" />
+    <Content Include="glyphicons-halflings-regular.f4769f9bdb7466be6508.eot" />
+    <Content Include="glyphicons-halflings-regular.fa2772327f55d8198301.woff" />
     <Content Include="Client\dist\inline.bundle.js.map" />
     <Content Include="Client\dist\main.bundle.js.map" />
     <Content Include="Client\dist\polyfills.bundle.js.map" />

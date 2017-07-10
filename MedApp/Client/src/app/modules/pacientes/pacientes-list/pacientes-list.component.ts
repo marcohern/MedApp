@@ -17,7 +17,7 @@ export class PacientesListComponent implements OnInit {
         private router:Router) { }
 
     ngOnInit() {
-        this.ps.getPacientes().subscribe(pacientes => {
+        this.ps.listaPacientes().subscribe(pacientes => {
             this.pacientes = pacientes;
         });
     }

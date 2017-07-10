@@ -2,7 +2,7 @@
 <a class="btn btn-warning" [routerLink]="['/pacientes']">
   <i class="glyphicon glyphicon-arrow-left"></i> Regresar
 </a>
-<form [formGroup]="pacienteForm">
+<form [formGroup]="pacienteForm" (ngSubmit)="guardarPaciente(pacienteForm.value)">
   <div class="row">
     <div class="col-sm-12">
       <div class="form-group">
