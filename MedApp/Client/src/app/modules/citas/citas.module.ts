@@ -1,6 +1,7 @@
 ﻿import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DatepickerModule } from 'ngx-bootstrap/datepicker';
 import { HttpModule } from '@angular/http';
 import { CitasRoutes } from './citas.routes';
 
@@ -15,6 +16,7 @@ import { CitasService } from './citas.service';
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
+    DatepickerModule.forRoot(),
     CitasRoutes
   ],
   declarations: [CitasListComponent, CitasDetailComponent],

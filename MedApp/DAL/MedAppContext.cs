@@ -18,6 +18,7 @@ namespace MedApp.DAL
         public DbSet<Paciente> Pacientes { get; set; }
         public DbSet<Cita> Citas { get; set; }
         public DbSet<TipoCita> TipoCitas { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

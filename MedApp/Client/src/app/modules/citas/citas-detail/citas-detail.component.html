@@ -15,7 +15,8 @@
     <div class="col-sm-6">
       <div class="form-group">
         <label for="fecha">Fecha*</label>
-        <input class="form-control" id="fecha" type="text" formControlName="fecha" />
+        <!--input class="form-control" id="fecha" type="text" formControlName="fecha" /-->
+        <datepicker formControlName="fecha" [minDate]="minDate" [showWeeks]="true" [dateDisabled]="dateDisabled"></datepicker>
       </div>
     </div>
   </div>

@@ -192,8 +192,10 @@
     <Compile Include="DAL\ContextFactory.cs" />
     <Compile Include="DAL\Datos.cs" />
     <Compile Include="DAL\DatosFactory.cs" />
+    <Compile Include="DAL\Hasher.cs" />
     <Compile Include="DAL\ICitasRepositorio.cs" />
     <Compile Include="DAL\IDatos.cs" />
+    <Compile Include="DAL\IHasher.cs" />
     <Compile Include="DAL\IRepositorio.cs" />
     <Compile Include="DAL\ITipoCitasRepositorio.cs" />
     <Compile Include="DAL\MedAppContext.cs" />
@@ -208,12 +210,17 @@
     <Compile Include="Migrations\201707101348299_InitialCreate.Designer.cs">
       <DependentUpon>201707101348299_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707102258509_CreateUsersTable.cs" />
+    <Compile Include="Migrations\201707102258509_CreateUsersTable.Designer.cs">
+      <DependentUpon>201707102258509_CreateUsersTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cita.cs" />
     <Compile Include="Models\Entidad.cs" />
     <Compile Include="Models\IEntidad.cs" />
     <Compile Include="Models\Paciente.cs" />
     <Compile Include="Models\TipoCita.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -347,6 +354,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201707101348299_InitialCreate.resx">
       <DependentUpon>201707101348299_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707102258509_CreateUsersTable.resx">
+      <DependentUpon>201707102258509_CreateUsersTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
