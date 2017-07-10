@@ -1,3 +1,30 @@
-<p>
-  citas-detail works!
-</p>
+﻿<h2>Detalles de Cita</h2>
+<a class="btn btn-warning" [routerLink]="['/citas']">
+  <i class="glyphicon glyphicon-arrow-left"></i> Regresar
+</a>
+<form [formGroup]="citaForm">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="tipoCita">Tipo de Cita*</label>
+        <select formControlName="tipoCita" placeholder="Escoge Tipo de Cita" class="form-control">
+          <option *ngFor="let tipoCita of tiposCita" [value]="tipoCita.ID">{{tipoCita.Descripcion}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="fecha">Fecha*</label>
+        <input class="form-control" id="fecha" type="text" formControlName="fecha" />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label for="paciente">Paciente*</label>
+        <input class="form-control" id="paciente" type="text" formControlName="paciente" />
+      </div>
+    </div>
+  </div>
+</form>
