@@ -15,6 +15,7 @@ export class CitasListComponent implements OnInit {
   ngOnInit() {
       this.cs.listaCitas().subscribe(citas => {
           this.citas = citas;
+          console.log(citas);
       });
   }
 

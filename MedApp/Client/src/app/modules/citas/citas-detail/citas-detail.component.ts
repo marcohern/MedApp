@@ -22,7 +22,9 @@ export class CitasDetailComponent implements OnInit {
     private minDate: Date;
     private dateDisabled: boolean = false;
     private citaForm: FormGroup;
+    private cita: Cita;
     private tiposCita: TipoCita[] = [];
+    public dt: Date = new Date();
 
     constructor(
         private fb: FormBuilder,
@@ -38,9 +40,44 @@ export class CitasDetailComponent implements OnInit {
 
         this.citaForm = this.fb.group({
             tipoCita: [''],
-            fecha: [''],
-            paciente: ['']
+            fecha   : [''],
+            paciente: [''],
+            dt: ['']
         });
+
+        this.cs.obtenerTipoCitaOpciones().subscribe(tiposCita => {
+            this.tiposCita = tiposCita;
+        });
+
+        let id = this.route.snapshot.params['id'];
+        if (id) {
+            this.cs.obtenerCita(id).subscribe(cita => {
+                this.cita = cita;
+                this.citaForm.setValue({
+                    tipoCita: cita.TipoCitaID,
+                    fecha: cita.Fecha,
+                    paciente: cita.PacienteID
+                });
+            });
+        } else {
+            this.cita = {
+                ID: null,
+                PacienteID: 0,
+                TipoCitaID: 0,
+                Fecha: new Date(0)
+            };
+        }
     }
 
+    fechaCambio() {
+        this.citaForm.setValue({ fecha: this.citaForm.value.dt });
+    }
+
+    guardarCita(value) {
+        let id = this.route.snapshot.params['id'];
+    }
+
+    regresar() {
+        this.router.navigate(['/citas']);
+    }
 }

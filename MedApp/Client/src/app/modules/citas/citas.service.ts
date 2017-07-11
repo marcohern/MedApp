@@ -29,7 +29,7 @@ export class CitasService {
             .do(data => this.do(data));
     }
 
-    obtenerCita(id: number): Observable<Cita[]> {
+    obtenerCita(id: number): Observable<Cita> {
         return this.http.get('/api/citas/' + id)
             .map((r: Response) => <Cita>r.json())
             .catch(this.handleError)
@@ -63,7 +63,7 @@ export class CitasService {
     }
 
     obtenerTipoCitaOpciones(): Observable<TipoCita[]> {
-        return this.http.get('/api/tipo-citas')
+        return this.http.get('/api/tipocitas')
             .map((r: Response) => <TipoCita[]>r.json())
             .catch(this.handleError)
             .do(data => this.do(data));

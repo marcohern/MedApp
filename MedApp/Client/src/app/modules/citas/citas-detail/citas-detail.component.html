@@ -16,7 +16,8 @@
       <div class="form-group">
         <label for="fecha">Fecha*</label>
         <!--input class="form-control" id="fecha" type="text" formControlName="fecha" /-->
-        <datepicker formControlName="fecha" [minDate]="minDate" [showWeeks]="true" [dateDisabled]="dateDisabled"></datepicker>
+        <datepicker [minDate]="minDate" [showWeeks]="true" formControlName="dt" [dateDisabled]="dateDisabled" (activeDateChange)="fechaCambio()" ></datepicker>
+        <input class="form-control" formControlName="fecha" id="fecha" type="text" readonly/>
       </div>
     </div>
   </div>
